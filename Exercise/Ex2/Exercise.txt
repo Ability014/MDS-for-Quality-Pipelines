@@ -1,0 +1,5 @@
+###################################### Exercise 2 ##############################################
+
+In this exercise, you will pull the data migrated to postgres in exercise 1 into bigquery using airbyte. Ensure to create separate 
+connections to pull them into separate predefined schema in bigquery using the knowledge of what was derived from the ERD created in 
+exercise 1.
