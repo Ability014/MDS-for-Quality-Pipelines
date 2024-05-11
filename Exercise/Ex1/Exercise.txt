@@ -1,5 +1,5 @@
 ###################################### Exercise 1 ##############################################
 
-In this exercise, you will put the data in the Data directory and uploade to a gcs bucket/airbyte server directory, and then load into docker-postgres using Python.
+In this exercise, you will put the data in the Exercise/Data directory and uploade to a gcs bucket/airbyte server directory, and then load into docker-postgres using Python.
 
 You will draw out an ERD for the data migrated
