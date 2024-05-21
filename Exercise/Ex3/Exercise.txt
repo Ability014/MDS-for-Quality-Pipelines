@@ -1,4 +1,4 @@
 ###################################### Exercise 3 ##############################################
 
-In this exercise, you will create dbt project to transform the bigquery dataset and load them back to a separate predefined schema. Use appropriate 
+In this exercise, you will create dbt project to transform the snowflake dataset and load them back to a separate predefined schema. Use appropriate 
 materializations (incremental, overwrite) where applicable. Apply the Kimball dimensional modeling technique to create facts and dimensions on the dataset.
