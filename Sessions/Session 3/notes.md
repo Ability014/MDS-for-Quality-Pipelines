@@ -1,4 +1,4 @@
-# MDS Session 2: EL with Airbyte & Python to Postgres & Snowflake Warehouse
+# MDS Session 3: EL with Airbyte & Python to Postgres & Snowflake Warehouse
 
 In this session: 
 
