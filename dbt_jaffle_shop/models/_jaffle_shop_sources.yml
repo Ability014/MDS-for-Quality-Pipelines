@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    description: "This is the database for the RAW tables in Jaffle shop database"
+    database: JAFFLE_SHOP
+    schema: RAW
+    tables:
+      - name: raw_customers
+      - name: raw_items
+      - name: raw_orders
+      - name: raw_products
+      - name: raw_stores
+      - name: raw_supplies
