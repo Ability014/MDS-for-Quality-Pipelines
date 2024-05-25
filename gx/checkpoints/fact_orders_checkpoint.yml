@@ -1,0 +1,109 @@
+name: fact_orders_checkpoint
+config_version: 1.0
+template_name:
+module_name: great_expectations.checkpoint
+class_name: Checkpoint
+run_name_template:
+expectation_suite_name:
+batch_request: {}
+action_list:
+  - name: store_validation_result
+    action:
+      class_name: StoreValidationResultAction
+  - name: store_evaluation_params
+    action:
+      class_name: StoreEvaluationParametersAction
+  - name: update_data_docs
+    action:
+      class_name: UpdateDataDocsAction
+evaluation_parameters: {}
+runtime_configuration: {}
+validations:
+  - action_list:
+      - name:
+        action:
+          class_name: StoreValidationResultAction
+      - name:
+        action:
+          class_name: StoreEvaluationParametersAction
+      - name:
+        action:
+          class_name: UpdateDataDocsAction
+    batch_request:
+      datasource_name: my_jaffle_shop_source
+      data_asset_name: fact_orders
+      options:
+        month_key: 202604
+      batch_slice:
+    expectation_suite_name: fact_orders_suites
+  - action_list:
+      - name:
+        action:
+          class_name: StoreValidationResultAction
+      - name:
+        action:
+          class_name: StoreEvaluationParametersAction
+      - name:
+        action:
+          class_name: UpdateDataDocsAction
+    batch_request:
+      datasource_name: my_jaffle_shop_source
+      data_asset_name: fact_orders
+      options:
+        month_key: 202605
+      batch_slice:
+    expectation_suite_name: fact_orders_suites
+  - action_list:
+      - name:
+        action:
+          class_name: StoreValidationResultAction
+      - name:
+        action:
+          class_name: StoreEvaluationParametersAction
+      - name:
+        action:
+          class_name: UpdateDataDocsAction
+    batch_request:
+      datasource_name: my_jaffle_shop_source
+      data_asset_name: fact_orders
+      options:
+        month_key: 202606
+      batch_slice:
+    expectation_suite_name: fact_orders_suites
+  - action_list:
+      - name:
+        action:
+          class_name: StoreValidationResultAction
+      - name:
+        action:
+          class_name: StoreEvaluationParametersAction
+      - name:
+        action:
+          class_name: UpdateDataDocsAction
+    batch_request:
+      datasource_name: my_jaffle_shop_source
+      data_asset_name: fact_orders
+      options:
+        month_key: 202607
+      batch_slice:
+    expectation_suite_name: fact_orders_suites
+  - action_list:
+      - name:
+        action:
+          class_name: StoreValidationResultAction
+      - name:
+        action:
+          class_name: StoreEvaluationParametersAction
+      - name:
+        action:
+          class_name: UpdateDataDocsAction
+    batch_request:
+      datasource_name: my_jaffle_shop_source
+      data_asset_name: fact_orders
+      options:
+        month_key: 202608
+      batch_slice:
+    expectation_suite_name: fact_orders_suites
+profilers: []
+ge_cloud_id:
+expectation_suite_ge_cloud_id:
