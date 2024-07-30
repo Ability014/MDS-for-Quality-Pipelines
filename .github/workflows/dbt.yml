@@ -25,7 +25,7 @@ jobs:
       run: |
         mkdir /home/runner/.dbt
         echo "This is my current working directory=$( pwd )"
-        cp profiles.yml /home/runner/.dbt/
+        cp ./dbt_jaffle_shop/profiles.yml /home/runner/.dbt/
         export snowflake_pass=${{ secrets.SNOWFLAKE_PASS }}
         dbt deps
         dbt run --full-refresh
