@@ -1,4 +1,4 @@
 ###################################### Exercise 4 ##############################################
 
-In this exercise, you will explore the facts and dimension tables and create expectations based on your findings about the data. You can 
-also specify expectations based on domain knowledge about the data. Create checkpoints that runs against these expectations.
+In this exercise, you will explore the facts and dimension tables and create expectations based on your findings about the data. 
+You can also specify expectations based on domain knowledge about the data. Create checkpoints that runs against these expectations.

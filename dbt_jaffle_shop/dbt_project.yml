@@ -40,3 +40,8 @@ models:
     INTERMEDIATE:
       +materialized: view
       +schema: INTERMEDIATE
+    Flex:
+      +materialized: table
+      +transient: false
+      +database: orbit_mds_dev
+      +schema: core

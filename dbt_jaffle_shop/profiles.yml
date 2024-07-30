@@ -1,0 +1,33 @@
+dbt_jaffle_shop:
+  outputs:
+    CORE:
+      account: ynb38656.us-east-1
+      database: JAFFLE_SHOP
+      password: '{{ env_var(''pass_'') }}'
+      role: AIRBYTE_ADMIN
+      schema: CORE
+      threads: 2
+      type: snowflake
+      user: AIRBYTE014
+      warehouse: MDS_WAREHOUSE
+    INTERMEDIATE:
+      account: ynb38656.us-east-1
+      database: JAFFLE_SHOP
+      password: '{{ env_var(''pass_'') }}'
+      role: AIRBYTE_ADMIN
+      schema: INTERMEDIATE
+      threads: 2
+      type: snowflake
+      user: AIRBYTE014
+      warehouse: MDS_WAREHOUSE
+    RAW:
+      account: ynb38656.us-east-1
+      database: JAFFLE_SHOP
+      password: '{{ env_var(''pass_'') }}'
+      role: AIRBYTE_ADMIN
+      schema: RAW
+      threads: 2
+      type: snowflake
+      user: AIRBYTE014
+      warehouse: MDS_WAREHOUSE
+  target: RAW
