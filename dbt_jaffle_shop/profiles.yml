@@ -23,7 +23,7 @@ dbt_jaffle_shop:
     RAW:
       account: ynb38656.us-east-1
       database: JAFFLE_SHOP
-      password: '{{ env_var(''pass_'') }}'
+      password: '{{ env_var(''snowflake_pass'') }}'
       role: AIRBYTE_ADMIN
       schema: RAW
       threads: 2
