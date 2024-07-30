@@ -41,3 +41,22 @@ jobs:
       with:
         name: dbt-manifest
         path: ./dbt_jaffle_shop/target/manifest.json
+    - name: Upload catalog.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: dbt-catalog
+        path: ./dbt_jaffle_shop/target/catalog.json
+    - name: Upload graph_summary.json
+      uses: actions/upload-artifact@v4
+      with:
+        name: dbt-graph_summary
+        path: ./dbt_jaffle_shop/target/graph_summary.json
+    - name: Upload index.html
+      uses: actions/upload-artifact@v4
+      with:
+        name: dbt-index
+        path: ./dbt_jaffle_shop/target/index.html
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+    - name: Display structure of downloaded files
+      run: ls -R
