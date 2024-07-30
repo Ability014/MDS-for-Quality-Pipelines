@@ -27,7 +27,7 @@ jobs:
         echo "This is my current working directory=$( pwd )"
         cp ./dbt_jaffle_shop/profiles.yml /home/runner/.dbt/
         export snowflake_pass=${{ secrets.SNOWFLAKE_PASS }}
-        dbt deps
+        dbt deps --project-dir ./dbt_jaffle_shop
         dbt run --full-refresh --project-dir ./dbt_jaffle_shop
         dbt test --project-dir ./dbt_jaffle_shop
         dbt docs generate --project-dir ./dbt_jaffle_shop
