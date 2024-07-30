@@ -12,11 +12,11 @@ jobs:
   dbt-project-run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.8'
     - name: Install dbt
@@ -28,16 +28,16 @@ jobs:
         cp ./dbt_jaffle_shop/profiles.yml /home/runner/.dbt/
         export snowflake_pass=${{ secrets.SNOWFLAKE_PASS }}
         dbt deps --project-dir ./dbt_jaffle_shop
-        dbt run --full-refresh --project-dir ./dbt_jaffle_shop
+        dbt run --project-dir ./dbt_jaffle_shop
         dbt test --project-dir ./dbt_jaffle_shop
         dbt docs generate --project-dir ./dbt_jaffle_shop
     - name: Upload run_results.json
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: dbt-run-results
         path: ./dbt_jaffle_shop/target/run_results.json
     - name: Upload manifest.json
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: dbt-manifest
         path: ./dbt_jaffle_shop/target/manifest.json
