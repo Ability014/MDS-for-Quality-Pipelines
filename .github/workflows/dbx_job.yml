@@ -15,7 +15,7 @@ jobs:
       - name: Run dbx notebook
         uses: databricks/run-notebook@v0.0.3
         with:
-          workspace-notebook-path: https://dbc-de70ea77-0cf7.cloud.databricks.com/?o=4502173358838813#notebook/3683018038820904 #/Workspace/Users/orbitlearningcommunity@gmail.com/dlt_tpch_poc/dlt_tpch_poc
+          workspace-notebook-path: /Users/orbitlearningcommunity@gmail.com/dlt_tpch_poc/dlt_tpch_poc #https://dbc-de70ea77-0cf7.cloud.databricks.com/?o=4502173358838813#notebook/3683018038820904 #/Workspace/Users/orbitlearningcommunity@gmail.com/dlt_tpch_poc/dlt_tpch_poc
           databricks-host: dbc-de70ea77-0cf7.cloud.databricks.com
           databricks-token: ${{ secrets.DATABRICKS_TOKEN_DEV }}
           git-commit:
