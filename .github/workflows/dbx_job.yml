@@ -1,0 +1,25 @@
+name: Run DLT Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: 
+
+jobs:
+  run-dbx-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Run dbx notebook
+        uses: databricks/run-notebook@v0.0.3
+        with:
+          workspace-notebook-path: /Workspace/Users/orbitlearningcommunity@gmail.com/dlt_tpch_poc/dlt_tpch_poc
+          databricks-host: dbc-de70ea77-0cf7.cloud.databricks.com
+          databricks-token: ${{ secrets.DATABRICKS_TOKEN_DEV }}
+          git-commit:
+          existing-cluster-id: 0721-215948-6i8ncok5
+          #new-cluster-json: >
+          #  {"num_workers": 1, "soark_version": "10.4.x-scala2.12", "node_type_id": "Standard_D3_v2"}
+
