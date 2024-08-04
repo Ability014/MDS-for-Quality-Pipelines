@@ -31,3 +31,4 @@ dbt_jaffle_shop:
       user: AIRBYTE014
       warehouse: MDS_WAREHOUSE
   target: RAW
+  
